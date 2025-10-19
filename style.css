@@ -1,0 +1,172 @@
+:root {
+  --fg: #0f1a10; --muted: #4d5b4d; --bg: #ffffff; --acc: #2f9e44; --card: #f2f8f2;
+  --panel-h: 24vh;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font: 16px/1.6 system-ui, Arial, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+}
+header, main, footer { max-width: 960px; margin: auto; padding: 1rem; }
+
+a { color: var(--acc); text-decoration: none; }
+a:hover, a:focus-visible { text-decoration: underline; }
+
+.bar {
+  position: sticky; top: 0; background: var(--bg);
+  border-bottom: 1px solid rgba(2, 6, 23, 0.06); z-index: 10;
+}
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; }
+.brand { margin-right: .5rem; }
+.header-logo { height: 36px; width: auto; }
+
+nav a { color: var(--muted); padding: .25rem .125rem; outline-offset: 2px; }
+nav a:hover, nav a:focus-visible { color: var(--acc); text-decoration: underline; }
+
+/* Language toggle — dark-mode friendly */
+.lang-toggle { display:flex; gap:.5rem; margin-left:auto; }
+.lang-toggle button{
+  padding:.35rem .7rem;
+  border-radius:.6rem;
+  cursor:pointer;
+  background: transparent;
+  color: var(--fg);
+  border: 1px solid color-mix(in srgb, var(--fg) 35%, transparent);
+}
+.lang-toggle button:hover{
+  background: color-mix(in srgb, var(--fg) 12%, transparent);
+}
+.lang-toggle button[aria-pressed="true"]{
+  background: color-mix(in srgb, var(--fg) 20%, transparent);
+  border-color: color-mix(in srgb, var(--fg) 55%, transparent);
+}
+.lang-toggle button:focus-visible{
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+  border-radius:.6rem;
+}
+
+.intro { padding: 1.25rem 1rem; background: var(--card); }
+.intro-row { display: flex; align-items: center; gap: 1rem; }
+.intro-logo { width: 140px; height: auto; object-fit: contain; flex: 0 0 auto; display: block; }
+
+h1 { margin: 0 0 .35rem; font-size: clamp(1.5rem, 2.5vw + 1rem, 2rem); }
+.meta { color: var(--muted); font-size: .95rem; margin: .25rem 0 .5rem; }
+
+@media (max-width: 640px) {
+  .intro-row { flex-direction: row; align-items: flex-start; }
+  .intro-logo { width: 110px; }
+}
+
+h2 { margin: 2rem 0 .75rem; }
+
+.panel {
+  position: relative; overflow: hidden; border-radius: 16px;
+  height: var(--panel-h); min-height: 140px; max-height: 260px;
+  margin: 1rem 0; background: #eaeaea;
+}
+.panel > img {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; opacity: 0; transition: opacity .8s ease; z-index: 1;
+}
+.panel > img.show { opacity: 1; }
+
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { background: var(--card); border-radius: 21px; padding: 1rem; }
+.people img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; margin-right: .75rem; }
+.row { display: flex; align-items: center; gap: 1rem; }
+
+ul { padding-left: 1.2rem; }
+
+footer { margin-top: 3rem; color: var(--muted); font-size: .95rem; }
+section { scroll-margin-top: 72px; }
+
+.funding-grid { display: grid; gap: 1rem; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 900px) { .funding-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .funding-grid { grid-template-columns: 1fr; } }
+
+.funding {
+  display: flex; gap: 1rem; align-items: flex-start; background: var(--card);
+  border-radius: 16px; padding: 1.1rem 1rem; min-height: 110px;
+}
+.funding img { width: 56px; height: 56px; object-fit: contain; border-radius: 10px; flex: 0 0 auto; }
+.funding strong { display: block; margin-bottom: .2rem; }
+.funding .f-meta { font-size: .9rem; color: var(--muted); margin: .1rem 0 .35rem; }
+
+.contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "title title"
+    "logo  info";
+  gap: .75rem; align-items: start; background: var(--card); border-radius: 14px; padding: 1rem;
+}
+.contact-title { grid-area: title; margin: 0 0 .25rem; }
+.contact-logo { grid-area: logo; width: 44px; height: 44px; object-fit: contain; border-radius: 8px; }
+.contact-info { grid-area: info; }
+
+@media print {
+  .bar { position: static; border: none; }
+  header, main, footer { max-width: auto; }
+  a { text-decoration: none; }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #101712; --fg: #e8f3e8; --muted: #a3b5a3; --card: #162219; --acc: #4be3d4; }
+  .bar { border-bottom-color: rgba(200,230,200,0.2); }
+  a { color: var(--acc); }
+  nav a { color: var(--muted); }
+  nav a:hover, nav a:focus-visible { color: var(--acc); }
+}
+
+@media (max-width: 480px) {
+  body { font-size: 17px; }
+  .people img { width: 64px; height: 64px; }
+  :root { --panel-h: 22vh; }
+  .header-logo { height: 30px; width: auto; }
+}
+
+/* PEOPLE (optional helpers) */
+.people-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+.media { display: grid; grid-template-columns: auto 1fr; grid-template-areas: "photo body"; align-items: start; gap: 1rem; }
+.media-photo { grid-area: photo; display: block; }
+.media-body  { grid-area: body; }
+.avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; display: block; }
+@media (max-width: 480px) { .people-grid { grid-template-columns: 1fr; } .avatar { width: 64px; height: 64px; } .media { gap: .75rem; } }
+
+/* --- NEW: Arek Fröhlich bio layout --- */
+.person-grid {
+  display: grid;
+  gap: 1rem;
+}
+.person-top {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+.person-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.person-header h3 {
+  margin: 0 0 .25rem;
+  font-size: 1.25rem;
+}
+.person-bio p {
+  margin-top: 0;
+}
+@media (max-width: 640px) {
+  .person-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .person-photo img {
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arkadiusz Fröhlich Lab – Computational Ecology Without Borders</title>
+  <meta name="description" content="International research lab led by Arek Fröhlich." />
+  <link rel="icon" href="img/icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .skip-link{position:absolute;left:-9999px;top:auto;overflow:hidden}
+    .skip-link:focus{left:1rem;top:1rem;z-index:1000;background:#fff;color:#000;padding:.5rem .75rem;border-radius:.5rem;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+  </style>
+</head>
+
+<body>
+<a class="skip-link" href="#home">Skip to content</a>
+
+<div class="bar" role="navigation">
+  <header>
+    <nav aria-label="Primary">
+      <a href="#home" class="brand">
+        <img class="header-logo" src="img/logo-frohlichlab.png" width="144" height="36" decoding="async" alt="Fröhlich Lab logo" />
+      </a>
+
+      <!-- NAV: EN -->
+      <a href="#people" data-lang="en">People</a>
+      <a href="#research" data-lang="en">Research</a>
+      <a href="#methods" data-lang="en">Methods</a>
+      <a href="#publications" data-lang="en">Publications</a>
+      <a href="#fundings" data-lang="en">Funding</a>
+      <a href="#contact" data-lang="en">Contact</a>
+
+      <!-- NAV: PL -->
+      <a href="#people" data-lang="pl" style="display:none">Zespół</a>
+      <a href="#research" data-lang="pl" style="display:none">Badania</a>
+      <a href="#methods" data-lang="pl" style="display:none">Metody</a>
+      <a href="#publications" data-lang="pl" style="display:none">Publikacje</a>
+      <a href="#fundings" data-lang="pl" style="display:none">Finansowanie</a>
+      <a href="#contact" data-lang="pl" style="display:none">Kontakt</a>
+
+      <!-- LANG TOGGLE (note: NO data-lang on buttons) -->
+      <div class="lang-toggle" role="group" aria-label="Language" style="margin-left:auto">
+        <button type="button" data-target="en" aria-pressed="false" aria-label="Switch to English">EN</button>
+        <button type="button" data-target="pl" aria-pressed="true" aria-label="Przełącz na polski">PL</button>
+      </div>
+    </nav>
+  </header>
+</div>
+
+<main id="home">
+  <!-- INTRO -->
+  <section id="intro" class="intro">
+    <div class="intro-row">
+      <img class="intro-logo" src="img/logo-frohlichlab.png" width="140" height="140" decoding="async" alt="" />
+      <div>
+        <h1>Arkadiusz Fröhlich Lab</h1>
+
+        <p class="meta" data-lang="en">Computational Ecology Without Borders</p>
+        <p class="meta" data-lang="pl" style="display:none">Ekologia empiryczna bez granic</p>
+
+        <p data-lang="en">
+          We study how animals adapt to a changing world—both via long-term evolutionary shifts in functional traits and rapid adjustments in distribution and behaviour in the Anthropocene. Our interests are broad and ecology crosses boundaries, so future directions remain open-ended and exploratory.
+        </p>
+        <p data-lang="pl" style="display:none">
+          Badamy, jak zwierzęta dostosowują się do zmieniającego się świata — zarówno poprzez długoterminowe, ewolucyjne zmiany cech funkcjonalnych, jak i szybkie dostosowania w rozmieszczeniu i zachowaniu w Antropocenie. Nasze zainteresowania są szerokie, a ekologia przekracza granice, dlatego kierunki badań pozostają otwarte i eksploracyjne.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" data-photos="img/cover1.jpg,img/cover2.jpg,img/cover3.jpg" aria-label="Cover photos">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- PEOPLE -->
+  <section id="people">
+    <h2 data-lang="en">People</h2>
+    <h2 data-lang="pl" style="display:none">Zespół</h2>
+    <div id="people-list">Loading…</div>
+    <noscript>Please enable JavaScript to view the people list.</noscript>
+  </section>
+
+  <section class="panel" data-photos="img/people1.jpg,img/people2.jpg" aria-label="People separator">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2 data-lang="en">Research aims</h2>
+    <h2 data-lang="pl" style="display:none">Cele badawcze</h2>
+    <div id="research-list">Loading…</div>
+    <noscript>Please enable JavaScript to view research themes.</noscript>
+  </section>
+
+  <section class="panel" data-photos="img/research1.jpg,img/research2.jpg" aria-label="Research separator">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- METHODS -->
+  <section id="methods">
+    <h2 data-lang="en">Methods</h2>
+    <h2 data-lang="pl" style="display:none">Metody</h2>
+    <div id="methods-list">Loading…</div>
+  </section>
+
+  <section class="panel" data-photos="img/methods1.jpg,img/methods2.jpg" aria-label="Methods separator">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <h2 data-lang="en">Selected Publications</h2>
+    <h2 data-lang="pl" style="display:none">Wybrane publikacje</h2>
+    <div id="publications-list">Loading…</div>
+  </section>
+
+  <section class="panel" data-photos="img/pubs1.jpg,img/pubs2.jpg" aria-label="Publications separator">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- FUNDING -->
+  <section id="fundings">
+    <h2 data-lang="en">Funding</h2>
+    <h2 data-lang="pl" style="display:none">Finansowanie</h2>
+    <div id="fundings-list">Loading…</div>
+  </section>
+
+  <section class="panel" data-photos="img/funding1.jpg,img/funding2.jpg" aria-label="Funding separator">
+    <img alt="" loading="lazy"><img alt="" loading="lazy">
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2 class="contact-title" data-lang="en">Contact</h2>
+    <h2 class="contact-title" data-lang="pl" style="display:none">Kontakt</h2>
+
+    <img class="contact-logo" src="img/logo-iop.png" alt="Institute of Nature Conservation, Polish Academy of Sciences" width="44" height="44" decoding="async" />
+    <div class="contact-info">
+      <p style="margin:0" data-lang="en">
+        Institute of Nature Conservation<br>
+        Polish Academy of Sciences<br>
+        al. Adama Mickiewicza 33, Kraków, Poland<br>
+        <a href="mailto:frohlich@iop.krakow.pl">frohlich@iop.krakow.pl</a>
+      </p>
+      <p style="margin:0; display:none" data-lang="pl">
+        Instytut Ochrony Przyrody<br>
+        Polska Akademia Nauk<br>
+        al. Adama Mickiewicza 33, Kraków, Polska<br>
+        <a href="mailto:frohlich@iop.krakow.pl">frohlich@iop.krakow.pl</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="y"></span> Arkadiusz Fröhlich Lab · Photos © Arkadiusz Fröhlich · Hosted by INC PAS
+</footer>
+
+<script>
+  // Year
+  document.getElementById('y').textContent = new Date().getFullYear();
+
+  // --- LANGUAGE TOGGLE ---
+  const btns = document.querySelectorAll('.lang-toggle button');
+  function setLang(lang){
+    document.documentElement.setAttribute('lang', lang);
+
+    // Buttons: do NOT hide either; just update pressed state.
+    btns.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.target === lang)));
+
+    // Toggle all content (nav + main) that carries data-lang
+    document.querySelectorAll('main [data-lang], .bar nav [data-lang]').forEach(el => {
+      el.style.display = (el.dataset.lang === lang) ? '' : 'none';
+    });
+
+    try { localStorage.setItem('lang', lang); } catch(e){}
+  }
+  btns.forEach(b => b.addEventListener('click', () => setLang(b.dataset.target)));
+
+  // Default to saved language or EN (to match your preference)
+  setLang(localStorage.getItem('lang') || 'en');
+
+  // Load partials, then reapply language (in case they include data-lang)
+  Promise.allSettled([
+    fetch("people.html").then(r=>r.text()).then(html=>{ document.getElementById("people-list").innerHTML = html; }),
+    fetch("research.html").then(r=>r.text()).then(html=>{ document.getElementById("research-list").innerHTML = html; }),
+    fetch("methods.html").then(r=>r.text()).then(html=>{ document.getElementById("methods-list").innerHTML = html; }),
+    fetch("publications.html").then(r=>r.text()).then(html=>{ document.getElementById("publications-list").innerHTML = html; }),
+    fetch("fundings.html").then(r=>r.text()).then(html=>{ document.getElementById("fundings-list").innerHTML = html; })
+  ]).then(() => setLang(localStorage.getItem('lang') || 'pl'))
+    .catch(err => console.error("Fetch failed:", err));
+
+  // Panel rotator
+  (function(){
+    const prefersReduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const panels = document.querySelectorAll('.panel');
+    panels.forEach(panel=>{
+      const list=(panel.dataset.photos||'').split(',').map(s=>s.trim()).filter(Boolean);
+      if(!list.length) return;
+      const imgs = panel.querySelectorAll(':scope > img');
+      if(imgs.length < 2) return;
+      let a=imgs[0], b=imgs[1], idx=0, timer=null;
+
+      function showInitial(){
+        a.src=list[0]; a.classList.add('show');
+        if(list[1]) b.src=list[1];
+        idx=1%list.length;
+      }
+      function rotate(){
+        const next=list[idx];
+        const hidden=a.classList.contains('show')?b:a;
+        const shown =a.classList.contains('show')?a:b;
+        hidden.onload=()=>{ hidden.classList.add('show'); shown.classList.remove('show'); hidden.onload=null; };
+        if(!hidden.src.endsWith(next)) hidden.src=next; else hidden.onload();
+        idx=(idx+1)%list.length;
+      }
+      showInitial();
+      const obs=new IntersectionObserver(es=>{
+        es.forEach(e=>{
+          if(e.isIntersecting){
+            if(!timer && !prefersReduced) timer=setInterval(rotate,7000);
+          }else{
+            if(timer){ clearInterval(timer); timer=null; }
+          }
+        });
+      },{threshold:0.2});
+      obs.observe(panel);
+    });
+  })();
+</script>
+</body>
+</html>
