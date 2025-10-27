@@ -11,8 +11,8 @@ Our lab explores how animals adapt to an ever-changing world, integrating ecolog
 - **Urban nature** — how cities can balance safety, aesthetics, and conservation.  
 - **Causal networks** — uncovering hidden pathways linking environment, traits, and behavior.
 
-🔗 **Website:** [your-lab-page-url-here]  
-📧 **Contact:** [your.email@institution.edu]
+🔗 **Website:** https://arkadiuszfrohlich.github.io/lab/  
+📧 **Contact:** frohlich@iop.krakow.pl
 
 ---
 
